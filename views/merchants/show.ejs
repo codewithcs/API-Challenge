@@ -1,0 +1,29 @@
+<%- include ("../partials/header") %>
+<div class="container">
+    <div class="row">
+        <h2>Displaying information of <%= merchant.merchantName %></h2>
+		
+        <div class="col-md-9">
+            <div class="thumbnail">
+                <div class="caption-full">
+					<p> <em> Submitted By <%= merchant.author.username %> </em> </p>
+					<h4>Latitude: <a><%=merchant.latitude%></a></h4>
+					<h4>Longitude: <a><%=merchant.longitude%></a></h4>
+                    <h4>Id: <a><%=merchant.merchantId%></a></h4>
+                    <h4>Name: <a><%= merchant.merchantName %></a></h4>
+					
+					<% if ( currentUser && merchant.author.id.equals(currentUser._id ) ) { %>
+						<a id="edit" class="btn btn-xs btn-warning" href="/merchants/<%= merchant._id%>/edit">Edit</a>
+						<form id="delete-form" action="/merchants/<%= merchant._id%>?_method=DELETE" method="POST">
+							<button class = "btn btn-danger">
+								Delete
+							</button>
+						</form> 
+					<% } %> 	
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ("../partials/footer") %>

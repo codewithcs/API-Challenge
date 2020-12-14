@@ -1,0 +1,29 @@
+<%- include ("../partials/header") %>
+
+<div class="container" >
+	<header class= "jumbotron">
+		<div class="container">  
+			<h1>Showing all the nearest Merchants</h1> 
+		</div> 
+	</header>  
+
+	<div class="row text-center" style="display:flex; flex-wrap:wrap"> 
+		
+	<% merchants.forEach ( function(merchant) { %>
+		
+		<div class="col-md-3 col-sm-6"> 
+			<div class="thumbnail" >	
+				<div class= "caption"> 
+					<h4><%= merchant.merchantId %></h4>
+					<h4><%= merchant.merchantName %></h4>
+				</div>		
+				<p>
+				   <a href="/merchants/<%= merchant._id %>" class="btn btn-primary"> View Info</a>
+				</p>
+			</div>
+		</div>
+		<% } ) ;  %>
+	</div>
+</div>
+	
+<%- include ("../partials/footer") %>

@@ -1,0 +1,30 @@
+#edit{
+	margin-bottom: 10px; 
+}
+
+.landing{
+  margin-left: 500px;
+}
+
+.view{
+	margin-left: 125px; 
+}
+
+.logo{
+	height: 400px; 
+}
+.welcome{
+	margin-left: 25px; 
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
