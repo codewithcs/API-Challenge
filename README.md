@@ -1,6 +1,7 @@
-Step 1:
-Install the dependencies specified in package.json file. 
-npm i dep1 dep2 dep3
+Run Locally: node app.js 
 
 Deployed on Heroku: 
 https://mastercard-test-123.herokuapp.com/
+
+Technologies Used:
+HTML, CSS, JavaScript, Node.js, Express.js, MongoDB. 
