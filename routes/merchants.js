@@ -83,11 +83,12 @@ router.post( "/", function(req, res) {
 	}) ; 
 });   
 
-// NEW ROUTE: Displays form to submit data for a new campground. 
+// NEW ROUTE: Displays form to submit data for a new merchant. 
 router.get( "/new", middleware.isLoggedIn, function(req, res) {
 	res.render("merchants/new") ; 
 }) ; 
 
+// SHOW 
 router.get("/:id" , function(req, res) { 
 	Merchant.findById(req.params.id).exec ( function ( err, foundMerchant ) { 
 		if ( err || !foundMerchant){
@@ -106,7 +107,7 @@ router.get("/:id/edit", middleware.checkMerchantOwnership, function(req, res){
 	})
 })
 
-// Update Merchant 
+// Update Merchant  // like POST request for the edit. 
 router.put("/:id", middleware.checkMerchantOwnership, function(req, res) {
 	Merchant.findByIdAndUpdate(req.params.id, req.body.merchant, function(err, updatedMerchant){	
 		if (err) {
