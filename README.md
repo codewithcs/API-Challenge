@@ -4,5 +4,3 @@ npm i dep1 dep2 dep3
 
 Deployed on Heroku: 
 https://mastercard-test-123.herokuapp.com/
-
-Make the App Responsive. 
